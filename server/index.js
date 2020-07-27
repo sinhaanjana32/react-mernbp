@@ -8,6 +8,17 @@ const cookieParser = require("cookie-parser");
 
 const config = require("./config/key");
 
+
+app.get("/", (req,res) => {
+  res.json({"hello": "Anjana"})
+})
+
+
+
+
+
+
+
 // const mongoose = require("mongoose");
 // mongoose
 //   .connect(config.mongoURI, { useNewUrlParser: true })
