@@ -10,7 +10,7 @@ const config = require("./config/key");
 
 
 app.get("/", (req,res) => {
-  res.json({"hello": "Anjana"})
+  res.json({"hello": "Anjana sinha"})
 })
 
 
