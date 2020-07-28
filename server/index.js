@@ -10,7 +10,7 @@ const config = require("./config/key");
 
 
 app.get("/", (req,res) => {
-  res.json({"hello": "Anjana sinha12"})
+  res.json({"hello": "Anjana sinha17"})
 })
 
 
@@ -57,7 +57,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
 
   // index.html for all page routes    html or routing and naviagtion
-  app.get('/*',(req, res) => {
+  app.get('/',(req, res) => {
     res.sendFile(path.join(__dirname, '../client', 'build', 'index.html'));
 });
 
