@@ -9,9 +9,6 @@ const cookieParser = require("cookie-parser");
 const config = require("./config/key");
 
 
-app.get("/", (req,res) => {
-  res.json({"hello": "Anjana sinha17"})
-})
 
 
 
@@ -48,6 +45,12 @@ app.use('/api/users', require('./routes/users'));
 //use this to show the image you have in node js server to client (react js)
 //https://stackoverflow.com/questions/48914987/send-image-path-from-node-js-express-server-to-react-client
 //app.use('/uploads', express.static('uploads'));
+
+app.use(express.static(path.join(__dirname, '../client/build')));
+app.get('/*', (req, res) => {
+res.sendFile(path.join(__dirname, '../client','build', 'index.html'));
+});
+
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
